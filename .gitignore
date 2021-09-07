@@ -1,2 +1,4 @@
 /Makefile
 /apiserver
+/.idea/dataSources.xml
+/.idea/sqldialects.xml
