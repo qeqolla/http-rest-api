@@ -30,7 +30,9 @@ func TestUserRepository_FindByEmail(t *testing.T) {
 	user := model.TestUser(t)
 	user.Email = email
 
-	s.User().Create(user)
+	if _, err := s.User().Create(user); err != nil {
+		return
+	}
 
 	u, err := s.User().FindByEmail(email)
 
